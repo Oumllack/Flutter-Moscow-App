@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'elements.dart';
+import 'package:mask_text_input_formatter/mask_text_input_formatter.dart';
 
 class RegistrationPage extends StatefulWidget {
   const RegistrationPage({super.key});
@@ -10,6 +11,11 @@ class RegistrationPage extends StatefulWidget {
 }
 
 class _RegistrationPageState extends State<RegistrationPage> {
+  final mask = MaskTextInputFormatter(
+    mask: '(###) ###-##-##',
+    filter: {"#": RegExp(r'[0-9]')},
+  );
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -96,6 +102,49 @@ class _RegistrationPageState extends State<RegistrationPage> {
                       topLeft: Radius.circular(30),
                       bottomLeft: Radius.circular(30),
                     ),
+                  ),
+                  child: Row(
+                    children: [
+                      SizedBox(
+                        width: 5,
+                      ),
+                      SvgPicture.asset('images/flags.svg'),
+                      SizedBox(
+                        width: 5,
+                      ),
+                      Text(
+                        '(+7)',
+                        style: TextStyle(
+                          fontSize: 14,
+                          fontFamily: 'SourceSansPro',
+                        ),
+                      ),
+                      SizedBox(
+                        width: 2,
+                      ),
+                      Icon(Icons.arrow_drop_down_sharp),
+                    ],
+                  ),
+                ),
+                SizedBox(
+                  width: 20,
+                ),
+                SizedBox(
+                  width: 150,
+                  child: TextField(
+                    style: TextStyle(
+                      fontSize: 15,
+                    ),
+                    decoration: const InputDecoration(
+                      hintText: "000 000 00 00",
+                      hintStyle: TextStyle(
+                        fontSize: 15,
+                        color: Color(0xFF99BFD4),
+                      ),
+                      border: InputBorder.none,
+                    ),
+                    keyboardType: TextInputType.number,
+                    inputFormatters: [mask],
                   ),
                 ),
               ],

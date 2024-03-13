@@ -38,6 +38,7 @@ dependencies:
 
   flutter_svg: ^2.0.9
   flutter_screenutil: ^5.9.0
+  mask_text_input_formatter: ^2.9.0
 
 dev_dependencies:
   flutter_test:
@@ -87,6 +88,7 @@ flutter:
     - images/Frame 4.png
     - images/Frame 4.svg
     - images/arrow.svg
+    - images/flags.svg
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:mask_text_input_formatter/mask_text_input_formatter.dart';
 
 class CheckBox extends StatefulWidget {
   const CheckBox({super.key});
@@ -16,6 +17,10 @@ class _CheckBoxState extends State<CheckBox> {
     return Center(
       child: Checkbox(
           value: isChecked,
+          side: BorderSide(
+            width: 1,
+            color: Color(0xFF99BFD4),
+          ),
           activeColor: Color(0xFF99BFD4),
           shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(2),
