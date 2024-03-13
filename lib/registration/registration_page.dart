@@ -80,76 +80,7 @@ class _RegistrationPageState extends State<RegistrationPage> {
           SizedBox(
             height: 30,
           ),
-          Container(
-            width: 331,
-            height: 51,
-            decoration: BoxDecoration(
-              color: Colors.white,
-              borderRadius: BorderRadius.circular(30),
-              border: Border.all(
-                color: Color(0xFF99BFD4),
-                width: 0.5,
-              ),
-            ),
-            child: Row(
-              children: [
-                Container(
-                  width: 87,
-                  height: 51,
-                  decoration: BoxDecoration(
-                    color: Color(0xFFF8F8F8),
-                    borderRadius: BorderRadius.only(
-                      topLeft: Radius.circular(30),
-                      bottomLeft: Radius.circular(30),
-                    ),
-                  ),
-                  child: Row(
-                    children: [
-                      SizedBox(
-                        width: 5,
-                      ),
-                      SvgPicture.asset('images/flags.svg'),
-                      SizedBox(
-                        width: 5,
-                      ),
-                      Text(
-                        '(+7)',
-                        style: TextStyle(
-                          fontSize: 14,
-                          fontFamily: 'SourceSansPro',
-                        ),
-                      ),
-                      SizedBox(
-                        width: 2,
-                      ),
-                      Icon(Icons.arrow_drop_down_sharp),
-                    ],
-                  ),
-                ),
-                SizedBox(
-                  width: 20,
-                ),
-                SizedBox(
-                  width: 150,
-                  child: TextField(
-                    style: TextStyle(
-                      fontSize: 15,
-                    ),
-                    decoration: const InputDecoration(
-                      hintText: "000 000 00 00",
-                      hintStyle: TextStyle(
-                        fontSize: 15,
-                        color: Color(0xFF99BFD4),
-                      ),
-                      border: InputBorder.none,
-                    ),
-                    keyboardType: TextInputType.number,
-                    inputFormatters: [mask],
-                  ),
-                ),
-              ],
-            ),
-          ),
+          PhoneNumber(),
           Spacer(),
           Padding(
             padding: EdgeInsets.only(bottom: 25),
