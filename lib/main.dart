@@ -19,7 +19,7 @@ class _MyAppState extends State<MyApp> {
   @override
   Widget build(BuildContext context) {
     return ScreenUtilInit(
-      designSize: Size(375, 812),
+      designSize: Size(412, 732),
       builder: (context, child) => MaterialApp(
         title: 'First Page',
         debugShowCheckedModeBanner: false,

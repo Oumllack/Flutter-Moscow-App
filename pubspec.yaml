@@ -84,6 +84,9 @@ flutter:
     - images/Frame 2.svg
     - images/Frame 3.png
     - images/Frame 3.svg
+    - images/Frame 4.png
+    - images/Frame 4.svg
+    - images/arrow.svg
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware

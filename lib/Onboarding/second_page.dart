@@ -38,8 +38,8 @@ class SecondPage extends StatelessWidget {
                   fontSize: 32,
                 ),
               ),
-              SizedBox(
-                height: 360,
+              Spacer(
+                flex: 5,
               ),
               SizedBox(
                 width: 379,
@@ -59,48 +59,49 @@ class SecondPage extends StatelessWidget {
               SizedBox(
                 width: 400,
                 child: Text(
-                  "Получайте баллы за отзывы о продукте и приглашения новых пользователей, покупайте на них продукты",
+                  "Получайте баллы за отзывы о продукте                                                         и приглашения новых пользователей,                                     покупайте на них продукты",
                   style: TextStyle(
                     fontSize: 13,
                     fontFamily: 'SourceSansPro',
                   ),
                 ),
               ),
-              SizedBox(
-                height: 126,
-              ),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  Text(
-                    '02/05',
-                    style: TextStyle(
-                      fontSize: 20,
-                      fontFamily: 'SourceSansProBold',
-                    ),
-                  ),
-                  Container(
-                    height: 60,
-                    width: 60,
-                    decoration: BoxDecoration(
-                      color: Colors.white,
-                      borderRadius: BorderRadius.circular(
-                        15,
+              Spacer(),
+              Padding(
+                padding: EdgeInsets.only(bottom: 25),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Text(
+                      '02/05',
+                      style: TextStyle(
+                        fontSize: 20,
+                        fontFamily: 'SourceSansProBold',
                       ),
                     ),
-                    child: IconButton(
-                      onPressed: () {
-                        Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                            builder: (context) => ThirdPage(),
-                          ),
-                        );
-                      },
-                      icon: Icon(Icons.arrow_forward_ios_rounded),
+                    Container(
+                      height: 60,
+                      width: 60,
+                      decoration: BoxDecoration(
+                        color: Colors.white,
+                        borderRadius: BorderRadius.circular(
+                          15,
+                        ),
+                      ),
+                      child: IconButton(
+                        onPressed: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) => ThirdPage(),
+                            ),
+                          );
+                        },
+                        icon: Icon(Icons.arrow_forward_ios_rounded),
+                      ),
                     ),
-                  ),
-                ],
+                  ],
+                ),
               ),
             ],
           ),

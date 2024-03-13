@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:my_app/registration/registration_page.dart';
 
 class FifthPage extends StatelessWidget {
   const FifthPage({super.key});
@@ -87,7 +88,14 @@ class FifthPage extends StatelessWidget {
                       ),
                     ),
                     child: IconButton(
-                      onPressed: () {},
+                      onPressed: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => RegistrationPage(),
+                          ),
+                        );
+                      },
                       icon: Icon(Icons.arrow_forward_ios_rounded),
                     ),
                   ),

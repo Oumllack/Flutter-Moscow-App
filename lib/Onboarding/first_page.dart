@@ -17,7 +17,7 @@ class FirstPage extends StatelessWidget {
             image: AssetImage(
               'images/Background 1.png',
             ),
-            fit: BoxFit.cover,
+            fit: BoxFit.fill,
           ),
         ),
         child: Container(
@@ -40,7 +40,7 @@ class FirstPage extends StatelessWidget {
                 ),
               ),
               SizedBox(
-                height: 60,
+                height: 40,
               ),
               SizedBox(
                 width: 379,
@@ -60,7 +60,7 @@ class FirstPage extends StatelessWidget {
               SizedBox(
                 width: 400,
                 child: Text(
-                  "Посмотрите доступные образцы продуктов,             заполните форму, получите заказ, оставьте отзыв и получите накопительные баллы",
+                  "Посмотрите доступные образцы продуктов,                   заполните форму, получите заказ, оставьте                                          отзыв и получите накопительные баллы",
                   style: TextStyle(
                     fontSize: 13,
                     fontFamily: 'SourceSansPro',
@@ -112,41 +112,42 @@ class FirstPage extends StatelessWidget {
                   ],
                 ),
               ),
-              SizedBox(
-                height: 17,
-              ),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  Text(
-                    '01/05',
-                    style: TextStyle(
-                      fontSize: 20,
-                      fontFamily: 'SourceSansProBold',
-                    ),
-                  ),
-                  Container(
-                    height: 60,
-                    width: 60,
-                    decoration: BoxDecoration(
-                      color: Colors.white,
-                      borderRadius: BorderRadius.circular(
-                        15,
+              Spacer(),
+              Padding(
+                padding: EdgeInsets.only(bottom: 25),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Text(
+                      '01/05',
+                      style: TextStyle(
+                        fontSize: 20,
+                        fontFamily: 'SourceSansProBold',
                       ),
                     ),
-                    child: IconButton(
-                      onPressed: () {
-                        Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                            builder: (context) => SecondPage(),
-                          ),
-                        );
-                      },
-                      icon: Icon(Icons.arrow_forward_ios_rounded),
+                    Container(
+                      height: 60,
+                      width: 60,
+                      decoration: BoxDecoration(
+                        color: Colors.white,
+                        borderRadius: BorderRadius.circular(
+                          15,
+                        ),
+                      ),
+                      child: IconButton(
+                        onPressed: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) => SecondPage(),
+                            ),
+                          );
+                        },
+                        icon: Icon(Icons.arrow_forward_ios_rounded),
+                      ),
                     ),
-                  ),
-                ],
+                  ],
+                ),
               ),
             ],
           ),
