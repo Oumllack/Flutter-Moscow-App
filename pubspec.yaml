@@ -39,6 +39,7 @@ dependencies:
   flutter_svg: ^2.0.9
   flutter_screenutil: ^5.9.0
   mask_text_input_formatter: ^2.9.0
+  pin_code_fields: ^8.0.1
 
 dev_dependencies:
   flutter_test:
@@ -68,6 +69,9 @@ flutter:
     - family: SourceSansPro
       fonts:
         - asset: assets/SourceSansPro-Regular.ttf
+    - family: IBMPlexMono
+      fonts:
+        - asset: assets/IBMPlexMono-Regular.ttf
     - family: SourceSansProBold
       fonts:
         - asset: assets/SourceSansPro-Bold.ttf
@@ -78,6 +82,8 @@ flutter:
     - images/Background 2.png
     - images/Background 1.png
     - images/Background 5.png
+    - images/Background 6.png
+    - images/Background 7.png
     - images/serum.png
     - images/serum.svg
     - images/serum.jpg
@@ -88,6 +94,7 @@ flutter:
     - images/Frame 4.png
     - images/Frame 4.svg
     - images/arrow.svg
+    - images/arrow 2.svg
     - images/flags.svg
 
   # An image asset can refer to one or more resolution-specific "variants", see
