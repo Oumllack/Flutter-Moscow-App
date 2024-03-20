@@ -25,7 +25,7 @@ class _PhoneNumberState extends State<PhoneNumber> {
   Widget build(BuildContext context) {
     return Center(
       child: Container(
-        width: 331,
+        margin: EdgeInsets.symmetric(horizontal: 24),
         height: 51,
         decoration: BoxDecoration(
           color: Colors.white,
@@ -99,14 +99,27 @@ class _PhoneNumberState extends State<PhoneNumber> {
 }
 
 class CheckBox extends StatefulWidget {
-  const CheckBox({super.key});
+  const CheckBox({
+    super.key,
+    required this.onPressed,
+    this.isChecked = false,
+  });
+
+  final VoidCallback onPressed;
+  final bool isChecked;
 
   @override
   State<CheckBox> createState() => _CheckBoxState();
 }
 
 class _CheckBoxState extends State<CheckBox> {
-  bool? isChecked = false;
+  @override
+  void initState() {
+    super.initState();
+    isChecked = widget.isChecked;
+  }
+
+  bool? isChecked;
 
   @override
   Widget build(BuildContext context) {
@@ -125,6 +138,7 @@ class _CheckBoxState extends State<CheckBox> {
             setState(() {
               isChecked = newBool;
             });
+            widget.onPressed.call();
           }),
     );
   }
@@ -179,27 +193,36 @@ class AcceptTermsText extends StatelessWidget {
   }
 }
 
-class ContinueButton extends StatelessWidget {
-  const ContinueButton({super.key});
+class ContinueButton extends StatefulWidget {
+  const ContinueButton({super.key, required this.isActive});
 
+  final bool isActive;
+
+  @override
+  State<ContinueButton> createState() => _ContinueButtonState();
+}
+
+class _ContinueButtonState extends State<ContinueButton> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      width: 331,
+      margin: EdgeInsets.symmetric(horizontal: 24),
       height: 45,
       decoration: BoxDecoration(
         color: Color(0xFF99BFD4),
         borderRadius: BorderRadius.circular(30),
       ),
       child: TextButton(
-        onPressed: () {
-          Navigator.push(
-            context,
-            MaterialPageRoute(
-              builder: (context) => ConfirmationPage(),
-            ),
-          );
-        },
+        onPressed: widget.isActive
+            ? () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => ConfirmationPage(),
+                  ),
+                );
+              }
+            : null,
         child: Row(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
@@ -223,26 +246,30 @@ class ContinueButton extends StatelessWidget {
 }
 
 class SecondContinueButton extends StatelessWidget {
-  const SecondContinueButton({super.key});
+  const SecondContinueButton({super.key, required this.isActive});
+
+  final bool isActive;
 
   @override
   Widget build(BuildContext context) {
     return Container(
-      width: 331,
+      margin: EdgeInsets.symmetric(horizontal: 24),
       height: 45,
       decoration: BoxDecoration(
         color: Color(0xFF99BFD4),
         borderRadius: BorderRadius.circular(30),
       ),
       child: TextButton(
-        onPressed: () {
-          Navigator.push(
-            context,
-            MaterialPageRoute(
-              builder: (context) => Succesful_page(),
-            ),
-          );
-        },
+        onPressed: isActive
+            ? () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => Succesful_page(),
+                  ),
+                );
+              }
+            : null,
         child: Row(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [

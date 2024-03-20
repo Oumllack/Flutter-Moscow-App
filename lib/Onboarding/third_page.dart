@@ -38,13 +38,16 @@ class ThirdPage extends StatelessWidget {
                   fontSize: 32,
                 ),
               ),
+              Spacer(
+                flex: 2,
+              ),
               SizedBox(
                 height: 150,
               ),
               SizedBox(
                 width: 390,
                 child: Text(
-                  "ВКЛЮЧИТЕ                        УВЕДОМЛЕНИЯ, ЧТОБЫ                   БЫТЬ В КУРСЕ ВСЕХ                     НОВЫХ ПРОДУКТОВ",
+                  "ВКЛЮЧИТЕ\nУВЕДОМЛЕНИЯ,ЧТОБЫ\nБЫТЬ В КУРСЕ ВСЕХ\nНОВЫХ ПРОДУКТОВ",
                   style: TextStyle(
                     fontSize: 40,
                     fontFamily: 'DrukCyr',
@@ -54,12 +57,12 @@ class ThirdPage extends StatelessWidget {
                 ),
               ),
               SizedBox(
-                height: 20,
+                height: 12,
               ),
               SizedBox(
                 width: 360,
                 child: Text(
-                  "Вы будете получать push-                                              уведомления с информацией о новых                        доступных товарах, акциях, скидках                                       и других событиях",
+                  "Вы будете получать push-\nуведомления с информацией о новых\nдоступных товарах, акциях, скидках\nи других событиях",
                   textAlign: TextAlign.right,
                   style: TextStyle(
                     fontSize: 14,
@@ -70,38 +73,42 @@ class ThirdPage extends StatelessWidget {
               SizedBox(
                 height: 159,
               ),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  Text(
-                    '03/05',
-                    style: TextStyle(
-                      fontSize: 20,
-                      fontFamily: 'SourceSansProBold',
-                    ),
-                  ),
-                  Container(
-                    height: 60,
-                    width: 60,
-                    decoration: BoxDecoration(
-                      color: Colors.white,
-                      borderRadius: BorderRadius.circular(
-                        15,
+              Spacer(),
+              Padding(
+                padding: EdgeInsets.only(bottom: 25),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Text(
+                      '03/05',
+                      style: TextStyle(
+                        fontSize: 20,
+                        fontFamily: 'SourceSansProBold',
                       ),
                     ),
-                    child: IconButton(
-                      onPressed: () {
-                        Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                            builder: (context) => FourthPage(),
-                          ),
-                        );
-                      },
-                      icon: Icon(Icons.arrow_forward_ios_rounded),
+                    Container(
+                      height: 60,
+                      width: 60,
+                      decoration: BoxDecoration(
+                        color: Colors.white,
+                        borderRadius: BorderRadius.circular(
+                          15,
+                        ),
+                      ),
+                      child: IconButton(
+                        onPressed: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) => FourthPage(),
+                            ),
+                          );
+                        },
+                        icon: Icon(Icons.arrow_forward_ios_rounded),
+                      ),
                     ),
-                  ),
-                ],
+                  ],
+                ),
               ),
             ],
           ),

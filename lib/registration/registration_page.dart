@@ -21,12 +21,15 @@ class _RegistrationPageState extends State<RegistrationPage> {
   );
 
   final String requiredNumber = '12345';
+  bool isActive = false;
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      resizeToAvoidBottomInset: false,
       backgroundColor: Colors.white,
       body: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
         children: [
           Header(),
           SizedBox(
@@ -39,19 +42,28 @@ class _RegistrationPageState extends State<RegistrationPage> {
           Spacer(),
           Padding(
             padding: EdgeInsets.only(bottom: 25),
-            child: Row(
-              children: [
-                SizedBox(
-                  width: 30,
-                ),
-                CheckBox(),
-                AcceptTermsText(),
-              ],
+            child: Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 30),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  CheckBox(
+                    onPressed: () {
+                      setState(() {
+                        isActive = !isActive;
+                      });
+                    },
+                  ),
+                  AcceptTermsText(),
+                ],
+              ),
             ),
           ),
           Padding(
             padding: EdgeInsets.only(bottom: 20),
-            child: ContinueButton(),
+            child: ContinueButton(
+              isActive: isActive,
+            ),
           ),
         ],
       ),

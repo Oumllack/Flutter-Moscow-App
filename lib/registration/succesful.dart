@@ -20,13 +20,13 @@ class _Succesful_pageState extends State<Succesful_page> {
                 image: AssetImage(
                   'images/Background 6.png',
                 ),
-                fit: BoxFit.cover,
-                alignment: Alignment(0, -1),
+                fit: BoxFit.contain,
+                alignment: Alignment(0, -1.1),
               ),
             ),
           ),
           Padding(
-            padding: EdgeInsets.only(top: 25),
+            padding: EdgeInsets.only(top: 5),
             child: Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
@@ -41,54 +41,56 @@ class _Succesful_pageState extends State<Succesful_page> {
               ],
             ),
           ),
-          Container(
-            margin: EdgeInsets.only(top: 245),
-            height: 470,
-            decoration: BoxDecoration(
-              borderRadius: BorderRadius.only(
-                topLeft: Radius.circular(40),
-                topRight: Radius.circular(40),
-              ),
-              image: DecorationImage(
-                image: AssetImage(
-                  'images/Background 7.png',
-                ),
-                fit: BoxFit.cover,
-              ),
-            ),
-            child: Stack(
-              children: [
-                Padding(
-                  padding: EdgeInsets.only(top: 30, left: 25),
-                  child: Row(
-                    children: [
-                      SizedBox(
-                        width: 300,
-                        child: Text(
-                          "Мы рады приветствовать Вас в нашем приложении. Чтобы предложить вам подходящие тесты продуктов, пройдите небольшой опрос и заполните личные данные",
-                          style: TextStyle(
-                            fontFamily: 'SourceSansPro',
-                            fontSize: 15,
-                            color: Colors.white,
+          Column(
+            children: [
+              Expanded(
+                child: Padding(
+                  padding: EdgeInsets.only(top: 259),
+                  child: Container(
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.only(
+                        topLeft: Radius.circular(40),
+                        topRight: Radius.circular(40),
+                      ),
+                      image: DecorationImage(
+                        image: AssetImage(
+                          'images/Background 7.png',
+                        ),
+                        fit: BoxFit.cover,
+                      ),
+                    ),
+                    child: Column(
+                      children: [
+                        Padding(
+                          padding: EdgeInsets.only(top: 30, left: 25),
+                          child: Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            children: [
+                              SizedBox(
+                                width: 300,
+                                child: Text(
+                                  "Мы рады приветствовать Вас в нашем приложении. Чтобы предложить вам подходящие тесты продуктов, пройдите небольшой опрос и заполните личные данные",
+                                  style: TextStyle(
+                                    fontFamily: 'SourceSansPro',
+                                    fontSize: 15,
+                                    color: Colors.white,
+                                  ),
+                                ),
+                              ),
+                            ],
                           ),
                         ),
-                      ),
-                    ],
+                        Spacer(),
+                        Padding(
+                          padding: EdgeInsets.only(bottom: 24),
+                          child: ThirdContinueButton(),
+                        ),
+                      ],
+                    ),
                   ),
                 ),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    Padding(
-                      padding: EdgeInsets.only(
-                        top: 400,
-                      ),
-                      child: ThirdContinueButton(),
-                    ),
-                  ],
-                )
-              ],
-            ),
+              ),
+            ],
           ),
         ],
       ),
@@ -104,6 +106,7 @@ class ThirdContinueButton extends StatelessWidget {
     return Container(
       width: 331,
       height: 45,
+      margin: EdgeInsets.symmetric(horizontal: 24),
       decoration: BoxDecoration(
         color: Colors.white,
         borderRadius: BorderRadius.circular(30),

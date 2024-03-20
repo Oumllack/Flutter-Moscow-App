@@ -58,7 +58,7 @@ class FifthPage extends StatelessWidget {
               SizedBox(
                 width: 400,
                 child: Text(
-                  "Наше приложение включает  функцию опроса, которая позволяет                                                 нам лучше понять ваши предпочтения                                                      и интересы пользователей",
+                  "Наше приложение включает  функцию опроса, которая позволяет\nнам лучше понять ваши предпочтения\nи интересы пользователей",
                   style: TextStyle(
                     fontSize: 13,
                     fontFamily: 'SourceSansPro',
@@ -66,40 +66,44 @@ class FifthPage extends StatelessWidget {
                 ),
               ),
               SizedBox(
-                height: 258,
+                height: 250,
               ),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  Text(
-                    '05/05',
-                    style: TextStyle(
-                      fontSize: 20,
-                      fontFamily: 'SourceSansProBold',
-                    ),
-                  ),
-                  Container(
-                    height: 60,
-                    width: 60,
-                    decoration: BoxDecoration(
-                      color: Colors.white,
-                      borderRadius: BorderRadius.circular(
-                        15,
+              Spacer(),
+              Padding(
+                padding: EdgeInsets.only(bottom: 25),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Text(
+                      '05/05',
+                      style: TextStyle(
+                        fontSize: 20,
+                        fontFamily: 'SourceSansProBold',
                       ),
                     ),
-                    child: IconButton(
-                      onPressed: () {
-                        Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                            builder: (context) => RegistrationPage(),
-                          ),
-                        );
-                      },
-                      icon: Icon(Icons.arrow_forward_ios_rounded),
+                    Container(
+                      height: 60,
+                      width: 60,
+                      decoration: BoxDecoration(
+                        color: Colors.white,
+                        borderRadius: BorderRadius.circular(
+                          15,
+                        ),
+                      ),
+                      child: IconButton(
+                        onPressed: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) => RegistrationPage(),
+                            ),
+                          );
+                        },
+                        icon: Icon(Icons.arrow_forward_ios_rounded),
+                      ),
                     ),
-                  ),
-                ],
+                  ],
+                ),
               ),
             ],
           ),

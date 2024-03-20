@@ -38,13 +38,16 @@ class FourthPage extends StatelessWidget {
                   fontSize: 32,
                 ),
               ),
+              Spacer(
+                flex: 2,
+              ),
               SizedBox(
                 height: 190,
               ),
               SizedBox(
                 width: 379,
                 child: Text(
-                  "НАШЕ ПРИЛОЖЕНИЕ                    РАБОТАЕТ В МОСКВЕ                          И МОСКОВСКОЙ                ОБЛАСТИ",
+                  "НАШЕ ПРИЛОЖЕНИЕ\nРАБОТАЕТ В МОСКВЕ\nИ МОСКОВСКОЙ\nОБЛАСТИ",
                   style: TextStyle(
                     fontSize: 40,
                     fontFamily: 'DrukCyr',
@@ -54,43 +57,44 @@ class FourthPage extends StatelessWidget {
                 ),
               ),
               SizedBox(
-                height: 10,
-              ),
-              SizedBox(
                 height: 208,
               ),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  Text(
-                    '04/05',
-                    style: TextStyle(
-                      fontSize: 20,
-                      fontFamily: 'SourceSansProBold',
-                    ),
-                  ),
-                  Container(
-                    height: 60,
-                    width: 60,
-                    decoration: BoxDecoration(
-                      color: Colors.white,
-                      borderRadius: BorderRadius.circular(
-                        15,
+              Spacer(),
+              Padding(
+                padding: EdgeInsets.only(bottom: 25),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Text(
+                      '04/05',
+                      style: TextStyle(
+                        fontSize: 20,
+                        fontFamily: 'SourceSansProBold',
                       ),
                     ),
-                    child: IconButton(
-                      onPressed: () {
-                        Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                            builder: (context) => FifthPage(),
-                          ),
-                        );
-                      },
-                      icon: Icon(Icons.arrow_forward_ios_rounded),
+                    Container(
+                      height: 60,
+                      width: 60,
+                      decoration: BoxDecoration(
+                        color: Colors.white,
+                        borderRadius: BorderRadius.circular(
+                          15,
+                        ),
+                      ),
+                      child: IconButton(
+                        onPressed: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) => FifthPage(),
+                            ),
+                          );
+                        },
+                        icon: Icon(Icons.arrow_forward_ios_rounded),
+                      ),
                     ),
-                  ),
-                ],
+                  ],
+                ),
               ),
             ],
           ),

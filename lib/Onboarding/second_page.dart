@@ -59,7 +59,7 @@ class SecondPage extends StatelessWidget {
               SizedBox(
                 width: 400,
                 child: Text(
-                  "Получайте баллы за отзывы о продукте                                                         и приглашения новых пользователей,                                     покупайте на них продукты",
+                  "Получайте баллы за отзывы о продукте\nи приглашения новых пользователей,\nпокупайте на них продукты",
                   style: TextStyle(
                     fontSize: 13,
                     fontFamily: 'SourceSansPro',

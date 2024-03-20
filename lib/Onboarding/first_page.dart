@@ -60,7 +60,7 @@ class FirstPage extends StatelessWidget {
               SizedBox(
                 width: 400,
                 child: Text(
-                  "Посмотрите доступные образцы продуктов,                   заполните форму, получите заказ, оставьте                                          отзыв и получите накопительные баллы",
+                  "Посмотрите доступные образцы продуктов,\nзаполните форму, получите заказ, оставьте\nотзыв и получите накопительные баллы",
                   style: TextStyle(
                     fontSize: 13,
                     fontFamily: 'SourceSansPro',
@@ -70,6 +70,7 @@ class FirstPage extends StatelessWidget {
               SizedBox(
                 height: 20,
               ),
+              Spacer(),
               Container(
                 width: 330,
                 height: 370,
